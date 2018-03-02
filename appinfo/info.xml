@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>endpointprotector_integration</id>
+	<name>EndpointProtector Integration</name>
+	<summary>Integrates endpointprotector.com into Nextcloud</summary>
+	<description>Integrates endpointprotector.com into Nextcloud</description>
+
+	<version>0.1.0</version>
+	<licence>agpl</licence>
+	<author>Joas Schilling</author>
+	<namespace>EndpointProtectorIntegration</namespace>
+
+	<types>
+		<filesystem/>
+	</types>
+
+	<category>files</category>
+	<category>integration</category>
+	<category>security</category>
+	<bugs>https://www.endpointprotector.com/</bugs>
+
+	<dependencies>
+		<nextcloud min-version="12" max-version="13" />
+	</dependencies>
+
+
+	<repair-steps>
+		<install>
+			<step>OCA\EndpointProtectorIntegration\Migration\CreateTag</step>
+		</install>
+	</repair-steps>
+</info>
